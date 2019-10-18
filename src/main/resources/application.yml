@@ -1,0 +1,21 @@
+##服务器配置
+server:
+  port: 8090
+  servlet:
+    path: /
+
+##spring mvc
+spring:
+  datasource:
+    name: druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/exam
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+#整合mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  config-location: classpath:mybatis.xml

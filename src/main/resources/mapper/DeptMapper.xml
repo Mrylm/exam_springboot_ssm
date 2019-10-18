@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.henu.springboot.dao.DeptMapper">
+    <!--向数据库中添加数据  -->
+    <insert id="insert" parameterType="Dept">
+        	insert into dept(dname,loc,dstatus) values(#{dname},#{loc},#{dstatus});
+        	</insert>
+
+    <!-- query id -->
+    <select id="queryById" parameterType="int" resultType="Dept">
+        		select deptno,dname,loc,dstatus from dept where deptno=#{deptno};
+        	</select>
+
+    <!-- query All -->
+    <select id="queryAll" resultType="Dept">
+        		Select deptno,dname,loc,dstatus from dept;
+        	</select>
+
+</mapper>
